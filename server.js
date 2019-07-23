@@ -3,6 +3,8 @@ const cors = require('cors');
 const express = require('express');
 const db = require('./db');
 
+
+//loading type definitions from schema file
 const port = process.env.PORT || 9000;
 const app = express();
 
