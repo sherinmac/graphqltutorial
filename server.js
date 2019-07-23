@@ -33,3 +33,10 @@ app.listen(
  * For   testing   the       stashes
  * vxnvmnx
  */
+
+/**
+ * for testing  the soft  reset
+ * 
+ * 
+ * 
+ */
