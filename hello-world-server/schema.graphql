@@ -9,4 +9,5 @@ type Student {
    lastName:String
    password:String
    collegeId:String
+   fullName:String 
 }
