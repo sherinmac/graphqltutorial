@@ -1,6 +1,7 @@
 type Query {
    greeting:String
    sayHello(name:String!):String
+   setFavouriteColor(color:ColorType):String
    students:[Student]
    studentById(id:ID!):Student
 }
@@ -18,4 +19,9 @@ type Student {
    collegeId:String
    fullName:String 
    college:College
+}
+enum ColorType {
+   RED
+   BLUE
+   GREEN
 }

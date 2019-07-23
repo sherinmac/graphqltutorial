@@ -3,7 +3,10 @@ const Query = {
     greeting: () => {
         return "hello from  TutorialsPoint !!!"
     },
-    sayHello:(root,args,context,info) => `Hi ${args.name} GraphQL server says Hello to you!!`,
+    sayHello: (root, args, context, info) => `Hi ${args.name} GraphQL server says Hello to you!!`,
+    setFavouriteColor: (root, args) => {
+        return "Your Fav Color is :" + args.color;
+    },
     students: () => db.students.list(),
 
     //resolver function for studentbyId
