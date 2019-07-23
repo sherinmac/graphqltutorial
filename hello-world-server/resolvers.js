@@ -3,6 +3,7 @@ const Query = {
     greeting: () => {
         return "hello from  TutorialsPoint !!!"
     },
+    sayHello:(root,args,context,info) => `Hi ${args.name} GraphQL server says Hello to you!!`,
     students: () => db.students.list(),
 
     //resolver function for studentbyId
@@ -20,6 +21,8 @@ const Student = {
     college: (root) => {
         return db.colleges.get(root.collegeId);
     }
+
+
 }
 
 module.exports = { Query, Student }
