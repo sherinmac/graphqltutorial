@@ -28,11 +28,23 @@ const Student = {
 
 const Mutation = {
     createStudent: (root, args, context, info) => {
+
         return db.students.create({
             collegeId: args.collegeId,
             firstName: args.firstName,
             lastName: args.lastName
         })
+    },
+
+    // new resolver function
+    addStudent_returns_object: (root, args, context, info) => {
+        const id = db.students.create({
+            collegeId: args.collegeId,
+            firstName: args.firstName,
+            lastName: args.lastName
+        })
+
+        return db.students.get(id)
     }
 }
 
